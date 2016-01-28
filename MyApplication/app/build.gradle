@@ -16,6 +16,18 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            debuggable true
+        }
+    }
+
+    productFlavors {
+        NA-SIT {
+            versionName "1.0-NA-SIT"
+        }
+        NA-UAT {
+            versionName "1.0-NA-UAT"
+        }
     }
 }
 
