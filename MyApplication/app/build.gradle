@@ -16,9 +16,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        debug {
-            debuggable true
-        }
     }
 
     productFlavors {
@@ -28,7 +25,42 @@ android {
         NA_UAT {
             versionName "1.0-NA-UAT"
         }
+        BR_SIT {
+            versionName "1.0-BR-SIT"
+        }
+        BR_UAT {
+            versionName "1.0-BR-UAT"
+        }
     }
+
+    signingConfigs {
+        NA_SIT {
+            storeFile file("../../keystore_NA.keystore") //Path to the keystore file
+            keyAlias "citibank"
+            storePassword "citibank"
+            keyPassword "citibank"
+        }
+        NA_UAT {
+            storeFile file("../../keystore_NA.keystore") //Path to the keystore file
+            keyAlias "citibank"
+            storePassword "citibank"
+            keyPassword "citibank"
+        }
+
+        BR_SIT {
+            storeFile file("../../keystore_BR.keystore") //Path to the keystore file
+            keyAlias "citibank"
+            storePassword "citibank"
+            keyPassword "citibank"
+        }
+        BR_UAT {
+            storeFile file("../../keystore_BR.keystore") //Path to the keystore file
+            keyAlias "citibank"
+            storePassword "citibank"
+            keyPassword "citibank"
+        }
+    }
+
 }
 
 dependencies {
