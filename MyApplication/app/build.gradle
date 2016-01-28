@@ -11,12 +11,6 @@ android {
         versionCode 1
         versionName "1.0"
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
 
     productFlavors {
         NA_SIT {
@@ -60,6 +54,18 @@ android {
             keyPassword "citibank"
         }
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            productFlavors.NA_SIT.signingConfig signingConfigs.NA_SIT
+            productFlavors.NA_UAT.signingConfig signingConfigs.NA_UAT
+            productFlavors.BR_SIT.signingConfig signingConfigs.BR_SIT
+            productFlavors.BR_UAT.signingConfig signingConfigs.BR_UAT
+        }
+    }
+
 
 }
 
