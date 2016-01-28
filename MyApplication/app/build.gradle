@@ -22,10 +22,10 @@ android {
     }
 
     productFlavors {
-        NA-SIT {
+        NA_SIT {
             versionName "1.0-NA-SIT"
         }
-        NA-UAT {
+        NA_UAT {
             versionName "1.0-NA-UAT"
         }
     }
