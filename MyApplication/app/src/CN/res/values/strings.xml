@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyApp</string>
+    <string name="app_name">MyApp_CN</string>
     
     <!-- Strings related to Settings -->
 
@@ -61,6 +61,6 @@
     <string name="title_activity_locale">LocaleActivity</string>
 
 
-    <string name="locale_actvity_header">Locale Specific Header</string>
+    <string name="locale_actvity_header">CN Specific Header</string>
     <string name="title_activity_webview_screen">WebviewScreen</string>
 </resources>

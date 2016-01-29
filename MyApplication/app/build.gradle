@@ -12,42 +12,30 @@ android {
         versionName "1.0"
     }
 
+
+
     productFlavors {
-        NA_SIT {
-            //versionName "1.0-NA-SIT"
-        }
-        NA_UAT {
-            //versionName "1.0-NA-UAT"
-        }
-        BR_SIT {
+
+        BR {
+            applicationId "com.demo.db.myapp.br"
             //versionName "1.0-BR-SIT"
         }
-        BR_UAT {
+        CN {
+            applicationId "com.demo.db.myapp.cn"
             //versionName "1.0-BR-UAT"
         }
     }
 
     signingConfigs {
-        NA_SIT {
-            storeFile file("../../keystore_NA.keystore") //Path to the keystore file
-            keyAlias "citibank"
-            storePassword "citibank"
-            keyPassword "citibank"
-        }
-        NA_UAT {
-            storeFile file("../../keystore_NA.keystore") //Path to the keystore file
-            keyAlias "citibank"
-            storePassword "citibank"
-            keyPassword "citibank"
-        }
 
-        BR_SIT {
+
+        BR {
             storeFile file("../../keystore_BR.keystore") //Path to the keystore file
             keyAlias "citibank"
             storePassword "citibank"
             keyPassword "citibank"
         }
-        BR_UAT {
+        CN {
             storeFile file("../../keystore_BR.keystore") //Path to the keystore file
             keyAlias "citibank"
             storePassword "citibank"
@@ -59,10 +47,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            productFlavors.NA_SIT.signingConfig signingConfigs.NA_SIT
-            productFlavors.NA_UAT.signingConfig signingConfigs.NA_UAT
-            productFlavors.BR_SIT.signingConfig signingConfigs.BR_SIT
-            productFlavors.BR_UAT.signingConfig signingConfigs.BR_UAT
+
+            productFlavors.BR.signingConfig signingConfigs.BR
+            productFlavors.CN.signingConfig signingConfigs.CN
         }
     }
 
@@ -74,6 +61,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.android.support:support-v4:23.1.0'
+    compile 'com.android.support:design:23.1.0'
 }
 
 apply from: "../artifacts.gradle"
